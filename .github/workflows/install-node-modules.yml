@@ -1,0 +1,1 @@
+name: Install Node Moduleson:  workflow_dispatch:    inputs:      install:        description: 'Install node modules'        required: true        default: 'true'jobs:  install:    runs-on: ubuntu-latest    steps:      - name: Checkout code        uses: actions/checkout@v2      - name: Install dependencies        run: npm install
