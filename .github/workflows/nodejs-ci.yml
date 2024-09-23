@@ -1,0 +1,1 @@
+name: Node.js CIon:  push:    branches:      - mainjobs:  build:    runs-on: ubuntu-latest    steps:      - name: Checkout code        uses: actions/checkout@v2      - name: Install dependencies        run: npm install      - name: Run tests        run: npm test
