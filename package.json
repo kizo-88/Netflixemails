@@ -1,0 +1,16 @@
+{
+  "name": "email-fetcher",
+  "version": "1.0.0",
+  "description": "An app to fetch emails using IMAP and Express.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.17.1",
+    "imap-simple": "^5.0.0",
+    "mailparser": "^3.5.2"
+  }
+}
