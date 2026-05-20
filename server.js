@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const imaps = require('imap-simple');
 const { simpleParser } = require('mailparser');
@@ -5,15 +6,15 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 const config = {
   imap: {
-    user: 'mmmm.muaz03@gmail.com',
-    password: 'aovg aeex chbm wikw',
+    user: process.env.EMAIL_USER,
+    password: process.env.EMAIL_PASSWORD,
     host: 'imap.gmail.com',
     port: 993,
     tls: true,
